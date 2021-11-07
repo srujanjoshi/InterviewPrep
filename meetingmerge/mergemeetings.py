@@ -16,13 +16,15 @@ def merge_meetings_on2(meeting_times):
 
 def merge_meetings(meeting_times):
     meeting_times.sort(key= lambda a: a[0])
-    for i in range(len(meeting_times)):
-        if(i< len(meeting_times) and (i+1 < len(meeting_times))):
-            if(meeting_times[i][1]>= meeting_times[i+1][0]):
-                new_time_block= (meeting_times[i][0],max(meeting_times[i][1],meeting_times[i+1][1]))
-                meeting_times[i]=new_time_block
-                meeting_times.remove(meeting_times[i+1])
-    print(meeting_times)
-merge_meetings([(0, 1), (3, 5), (4, 8), (10, 12), (9, 10)])
+    i=0
+    while (i<len(meeting_times)-1):
+        if(meeting_times[i][1]>= meeting_times[i+1][0]):
+            new_time_block= (meeting_times[i][0],max(meeting_times[i][1],meeting_times[i+1][1]))
+            meeting_times[i]=new_time_block
+            meeting_times.remove(meeting_times[i+1])
+        else:
+            i+=1
+    return(meeting_times)
 
+merge_meetings([(1, 4), (2, 5), (5, 8)])
 
