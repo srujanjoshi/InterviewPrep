@@ -16,18 +16,20 @@ def can_two_movies_fill_flight(movie_lengths, flight_length):
 
 
 
+    # def twoSum(self, movie_lengths, flight_length):
+    #     """
+    #     :type nums: List[int]
+    #     :type target: int
+    #     :rtype: List[int]
+    #     """
+    #     dict={}
+    #     for i in range(len(movie_lengths)):
+    #         first_movie_length= movie_lengths[i]
+    #         if(flight_length-first_movie_length) in dict:
+    #             return [i,dict[flight_length-first_movie_length]]
+    #         dict[first_movie_length]=i
 
-
-
-
-
-
-
-
-
-
-
-
+    #     return []
 
 # Tests
 
