@@ -14,4 +14,3 @@ def merge_lists(list_a, list_b):
     else:
         new_list.extend(list_a[a_index:])
     return new_list
-
